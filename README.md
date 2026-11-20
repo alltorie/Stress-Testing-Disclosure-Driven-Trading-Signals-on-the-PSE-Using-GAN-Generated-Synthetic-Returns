@@ -1,0 +1,2 @@
+# Stress-Testing-Disclosure-Driven-Trading-Signals-on-the-PSE-Using-GAN-Generated-Synthetic-Returns
+A thesis investigating the robustness of disclosure-driven trading signals in the Philippine Stock Exchange (PSE) through GAN-generated synthetic returns. It evaluates trading signal performance under simulated market conditions to assess their reliability, stability, and resilience to market uncertainty.
