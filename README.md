@@ -15,3 +15,10 @@ Outputs: outputs/events_with_cars.csv, outputs/h1_summary_liquid.csv, outputs/h1
 
 Needs outputs/events_with_cars.csv from Step 1 and text_dividends.jsonl in the data folder.
 Outputs: model_scores_dividends.csv, h2_bootstrap.csv, oos_predictions_*.csv
+
+## Step 3 (cost-aware backtest, H3)
+
+    python scripts/run_backtest.py --data <path>/pse_research/run_2026-11-15 --out outputs
+
+Needs outputs/events_with_cars.csv from Step 1. Costs follow the PSE fee schedule (src/pse/costs.py).
+Outputs: trades_primary.csv, selection_log.csv, h3_primary.csv, h3_sensitivity.csv

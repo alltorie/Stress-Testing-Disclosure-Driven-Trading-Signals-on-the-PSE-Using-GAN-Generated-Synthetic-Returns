@@ -1,0 +1,14 @@
+fold,n_train,n_test,chosen,n_traded
+2025-11,402,40,dividend,25
+2025-12,437,41,dividend,15
+2026-01,483,22,dividend,6
+2026-02,503,42,dividend,22
+2026-03,539,41,dividend,26
+2026-04,589,36,dividend,19
+2026-05,615,48,dividend,25
+2026-06,670,30,dividend,10
+2026-07,699,22,dividend,4
+2026-08,724,46,dividend,20
+2026-09,766,19,dividend,6
+2026-10,789,28,dividend,8
+2026-11,818,18,dividend,9
