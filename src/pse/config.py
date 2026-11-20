@@ -24,3 +24,14 @@ class Config:
     # Dividend larger than this share of the prior close is not trusted for adjustment.
     max_div_ratio: float = 0.20
     alpha: float = 0.05
+
+
+@dataclass(frozen=True)
+class BacktestConfig:
+    # Long-only. Entry at the close of t0 is the conservative, always-tradable choice.
+    entry: str = "close_t0"            # "close_t0" or "open_t0" (pre-open filings only)
+    hold_days: int = 2                 # exit at the close of t0 + hold_days
+    notional: float = 100_000.0        # peso size per trade, used for participation only
+    train_months: int = 12
+    min_train_events: int = 20
+    select_t: float = 1.96             # a type is traded if its training mean CAR is positive with t above this

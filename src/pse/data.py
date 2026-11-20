@@ -51,3 +51,9 @@ def load_prices(price_dir, cmpy_ids):
             if df is not None:
                 out[cid] = df
     return out
+
+
+def load_psei_open(path):
+    df = pd.read_csv(path)
+    df["date"] = pd.to_datetime(df["date"])
+    return df.drop_duplicates("date").set_index("date")["Open"].astype(float).sort_index()
