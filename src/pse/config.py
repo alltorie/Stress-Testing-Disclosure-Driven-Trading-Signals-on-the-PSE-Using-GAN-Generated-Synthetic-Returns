@@ -35,3 +35,20 @@ class BacktestConfig:
     train_months: int = 12
     min_train_events: int = 20
     select_t: float = 1.96             # a type is traded if its training mean CAR is positive with t above this
+
+
+@dataclass(frozen=True)
+class StressConfig:
+    n_paths: int = 500                 # simulated paths per scenario type
+    window_len: int = 250              # length of windows used for the stylized-fact tests (H4)
+    seed: int = 42
+    ann_days: int = 252                # annualization for the Sharpe ratio
+    cvar_level: float = 0.05
+    # Quant GAN settings, fixed before looking at stylized-fact results
+    gan_hidden: int = 48
+    gan_layers: int = 7                # kernel 2, dilations 1..64, receptive field 128
+    gan_noise_dim: int = 3
+    gan_train_len: int = 255
+    gan_iters: int = 3000
+    gan_batch: int = 32
+    gan_lr: float = 2e-4

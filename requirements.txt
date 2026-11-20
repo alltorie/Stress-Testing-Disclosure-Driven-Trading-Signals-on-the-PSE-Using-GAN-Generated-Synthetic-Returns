@@ -2,4 +2,6 @@ pandas
 numpy
 scipy
 scikit-learn
+arch
+torch
 pytest
