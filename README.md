@@ -1,14 +1,9 @@
-# Stress-Testing Disclosure-Driven Trading Signals on the Philippine Stock Exchange Using GAN-Generated Synthetic Returns
+# PSE disclosure event study (Step 1)
 
-## Overview
+    pip install -r requirements.txt
+    python -m pytest -q
+    python scripts/run_event_study.py --data <path>/pse_research/run_2026-11-15 --out outputs
 
-This project explores the robustness and reliability of disclosure-driven trading signals in the Philippine Stock Exchange (PSE). By leveraging Generative Adversarial Networks (GANs) to generate synthetic financial returns, the study aims to evaluate how trading signals derived from corporate disclosures perform under different simulated market conditions.
-
-The research focuses on examining signal performance, assessing sensitivity to market uncertainty, and determining whether disclosure-driven trading strategies remain consistent when exposed to synthetic market scenarios.
-
-## Objectives
-
-- Analyze the relationship between corporate disclosures and stock return behavior in the Philippine Stock Exchange.
-- Generate synthetic financial returns using Generative Adversarial Networks (GANs).
-- Stress-test disclosure-driven trading signals using synthetic market scenarios.
-- Evaluate the robustness and consistency of trading signals under varying market conditions.
+Modules in src/pse: config (all study parameters), data (loaders), events (event types,
+first tradable session), returns (dividend parsing and adjustment), eventstudy (CAR, H1 tests).
+Outputs: outputs/events_with_cars.csv, outputs/h1_summary_liquid.csv, outputs/h1_summary_all.csv
